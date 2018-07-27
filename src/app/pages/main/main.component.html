@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row" style="margin-top: 5px;">
+    <div class="col-6 col-md-6">
+      <app-menu [list]="categories" (sendSelected)="getCategory($event)"></app-menu>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <app-list-service #card [type]="category.id" [data]="services" (sendData)="getService($event)"></app-list-service>
+    </div>
+    <div class="col-md-3">
+      <app-form-service #form [list]="services" (newListService)="setService($event)"></app-form-service>
+    </div>
+  </div>
+</div>

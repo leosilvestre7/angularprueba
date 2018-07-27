@@ -1,0 +1,19 @@
+<div class="card" style="width: 18rem; margin-top: 45px;">
+  <div class="card-header">
+    <h5 class="card-title">Servicio</h5>
+  </div>
+  <form [formGroup]="serviceForm">
+    <div class="card-body">
+      <input type="hidden" formControlName="id">
+      <input type="hidden" formControlName="categoryId">
+      <label for="category">Nombre:</label>
+      <input type="text" formControlName="name" class="form-control" id="name">
+      <label for="category">Descripción:</label>
+      <input type="text" formControlName="description" class="form-control" id="description">
+    </div>
+    <div class="card-footer">
+      <button class="btn btn-outline-success card-link" (click)="saveService()">Grabar</button>
+      <button class="btn btn-outline-danger card-link" (click)="cancelService()">Cancelar</button>
+    </div>
+  </form>
+</div>
